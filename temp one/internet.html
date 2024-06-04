@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Router Configuration</title>
+    <!-- css styles  -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/muster.css">
+    <!-- Boxicons CSS icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="./image/logo.png" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">Router</span>
+                    <span class="profession">Router Configeration</span>
+                </div>
+            </div>
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Search">
+                </li>
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="./index.html">
+                            <i class='bx bx-home icon'></i>
+                            <span class="text nav-text">Home</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="./internet.html">
+                            <i class='bx bx-wifi icon'></i>
+                            <span class="text nav-text">Internet</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="./local.html">
+                            <i class='bx bx-network-chart icon'></i>
+                            <span class="text nav-text">Local Network</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="./settings.html">
+                            <i class='bx bx-cog icon'></i>
+                            <span class="text nav-text">Settings</span>
+                        </a>
+                    </li>
+
+
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="#">
+                        <i class='bx bx-log-out icon'></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+
+            </div>
+        </div>
+
+    </nav>
+
+
+    <div class="internet p-20  rad-10 ml-105 mr-10 mt-25 mb-15 ">
+        <h2 class="mt-0 mb-20">Internet List Table</h2>
+        <div class="responsive-table">
+            <table class="fs-15 w-full" id="internetTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Mac Address</th>
+                        <th>IP</th>
+                        <th>Number of Devices</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

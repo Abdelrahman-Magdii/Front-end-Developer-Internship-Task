@@ -1,0 +1,458 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header .current-time {
+    font-size: 14px;
+}
+
+header .user-links a {
+    margin-left: 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+/* nave pare  */
+
+nav {
+    background-color: #333;
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav li {
+    height: 50px;
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #444;
+}
+
+.side {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: #f5ecec;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.side li {
+    width: 100%;
+}
+
+.side a {
+    width: 100%;
+    border-bottom: 2px solid #777;
+    color: black;
+
+}
+
+.menu-button {
+    display: none;
+}
+
+@media(max-width: 800px) {
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .A{
+        justify-content: space-between;
+    }
+}
+
+@media(max-width: 400px) {
+    .side {
+        width: 100%;
+        margin-right: auto;
+    }
+}
+
+
+/* ******** */
+
+main {
+    padding: 20px;
+}
+
+.settings {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.settings .router {
+    flex: 2;
+    text-align: center;
+}
+
+.settings img {
+    height: 100px;
+}
+
+.device-list {
+    display: flex;
+    margin-top: 20px;
+}
+
+.device-list .sidebar {
+    flex: 1;
+    background-color: #4A148C;
+}
+
+.device-list .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+.device-list .sidebar ul li {
+    margin: 0;
+}
+
+.device-list .sidebar ul li a {
+    display: block;
+    padding: 15px 20px;
+    color: #eee;
+    text-decoration: none;
+    border: 0.5px solid #eee;
+
+}
+
+.device-list .sidebar ul li a:hover {
+    background-color: #333;
+}
+
+.device-list .device-table {
+    flex: 3;
+    padding: 0 20px;
+}
+
+.device-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.device-list table th,
+.device-list table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+.device-table {
+    overflow-x: auto;
+}
+
+/* media screen */
+@media (max-width: 768px) {
+    .device-list {
+        flex-direction: column;
+    }
+
+    .device-list .device-table {
+        padding-top: 20px;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    header .logo {
+        margin-right: auto;
+    }
+
+    header .current-time {
+        margin-left: auto;
+        margin-top: -65px;
+
+    }
+
+    header .user-links {
+        margin-left: auto;
+    }
+}
+
+
+
+
+/* internet page  */
+
+.container .box {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.box .sidebar {
+    flex: 1;
+    background-color: #4A148C;
+    color: #fff;
+    margin: 50px 10px 0 10px;
+    height: 100%;
+}
+
+.box .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+.box .sidebar ul li {
+    margin: 0;
+}
+
+.box .sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 15px 20px;
+    border-bottom: 0.5px solid #eee;
+}
+
+.box .sidebar ul li a:hover {
+    background-color: #333;
+}
+
+
+
+main {
+    flex: 3;
+}
+
+.page-info {
+    margin-bottom: 20px;
+}
+
+.page-info h1 {
+    font-size: 24px;
+    color: #4A148C;
+}
+
+.dsl-link-info h2 {
+    font-size: 20px;
+    color: #4A148C;
+}
+
+.dsl-link-info table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow-x: auto;
+
+}
+
+.dsl-link-info table,
+.dsl-link-info table th,
+.dsl-link-info table td {
+    border: 1px solid #ddd;
+}
+
+.dsl-link-info table th,
+.dsl-link-info table td {
+    padding: 10px;
+    text-align: left;
+}
+
+.dsl-link-info table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.dsl-link-info table tr:hover {
+    background-color: #f1f1f1;
+}
+
+#refreshButton {
+    background-color: #4A148C;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#refreshButton:hover {
+    background-color: #311B92;
+}
+
+
+/* media screen */
+@media (max-width: 768px) {
+    .container .box {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+
+/* local page */
+
+
+main .wlan-status .ssid-status details .table,
+main .additional-status details .table {
+    overflow-x: auto;
+}
+
+.page-info {
+    margin-bottom: 20px;
+}
+
+.page-info details {
+    font-size: 24px;
+    color: #4A148C;
+}
+
+.wlan-status h2 {
+    font-size: 20px;
+    color: #4A148C;
+}
+
+.wlan-basic-status,
+.ssid-status {
+    margin-bottom: 20px;
+}
+
+.wlan-basic-status summary,
+.ssid-status summary {
+    background-color: #4A148C;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.wlan-basic-status table,
+.ssid-status details table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.wlan-basic-status table td,
+.ssid-status details table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+#refreshButton {
+    background-color: #4A148C;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#refreshButton:hover {
+    background-color: #311B92;
+}
+
+
+.additional-status details {
+    margin-bottom: 20px;
+}
+
+.additional-status summary {
+    background-color: #4A148C;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.additional-status table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.additional-status table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+
+/* Management page */
+/* same as internet page  style */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f5f5f5;
+    margin-top: 20px;
+}

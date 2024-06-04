@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Router Configuration</title>
+    <!-- css styles  -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/muster.css">
+    <!-- Boxicons CSS icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+   
+
+
+
+</head>
+
+<body>
+
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="./image/logo.png" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">Router</span>
+                    <span class="profession">Router Configeration</span>
+                </div>
+            </div>
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Search">
+                </li>
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="./index.html">
+                            <i class='bx bx-home icon'></i>
+                            <span class="text nav-text">Home</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="./internet.html">
+                            <i class='bx bx-wifi icon'></i>
+                            <span class="text nav-text">Internet</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="./local.html">
+                            <i class='bx bx-network-chart icon'></i>
+                            <span class="text nav-text">Local Network</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="./settings.html">
+                            <i class='bx bx-cog icon'></i>
+                            <span class="text nav-text">Settings</span>
+                        </a>
+                    </li>
+
+
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="#">
+                        <i class='bx bx-log-out icon'></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+
+            </div>
+        </div>
+
+    </nav>
+
+
+    <main class=" ml-105 mr-10">
+        <div class="page-info">
+            <h1>Page Information</h1>
+            <p>This page shows the status of LAN.</p>
+        </div>
+
+        <div class="wlan-status">
+            <h2>WLAN Status</h2>
+            <div class="wlan-basic-status">
+                <h3>WLAN Basic Status</h3>
+                <table>
+                    <tr>
+                        <td>WLAN (2.4GHz)</td>
+                        <td>On</td>
+                        <td>Channel (2.4GHz)</td>
+                        <td>9</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="ssid-status">
+                <details>
+                    <summary>SSID1 (2.4GHz)</summary>
+                    <table>
+                        <tr>
+                            <td>SSID Name</td>
+                            <td>medo</td>
+                            <td>MAC Address</td>
+                            <td>20:8b:82:a3:8b:6e</td>
+                        </tr>
+                        <tr>
+                            <td>SSID Switch</td>
+                            <td>On</td>
+                            <td>Packets Received/Packets Sent</td>
+                            <td>796569/1308154</td>
+                        </tr>
+                        <tr>
+                            <td>Encryption Type</td>
+                            <td>WPA/WPA2-PSK</td>
+                            <td>Bytes Received/Bytes Sent</td>
+                            <td>163158830/1537088847</td>
+                        </tr>
+                    </table>
+                </details>
+            </div>
+
+            <div class="ssid-status">
+                <details>
+                    <summary>SSID2 (2.4GHz)</summary>
+                    <div class="table">
+                    <table>
+                        <tr>
+                            <td>SSID Name</td>
+                            <td>H168N_2G_SSID2</td>
+                            <td>MAC Address</td>
+                            <td>22:8b:82:a3:8b:6e</td>
+                        </tr>
+                        <tr>
+                            <td>SSID Switch</td>
+                            <td>Off</td>
+                            <td>Packets Received/Packets Sent</td>
+                            <td>0/0</td>
+                        </tr>
+                        <tr>
+                            <td>Encryption Type</td>
+                            <td>WPA/WPA2-PSK</td>
+                            <td>Bytes Received/Bytes Sent</td>
+                            <td>0/0</td>
+                        </tr>
+                    </table>
+                    </div>
+
+                    <button id="refreshButton">Refresh</button>
+
+                </details>
+            </div>
+
+        </div>
+
+        <div class="additional-status">
+            <details>
+                <summary>LAN Status</summary>
+                <!-- Add LAN Status details here -->
+                <div class="table">
+                    <table>
+                        <tr>
+                            <td>Interface</td>
+                            <td>Status</td>
+                            <td>IP Address</td>
+                            <td>Subnet Mask</td>
+                            <td>MAC Address</td>
+                        </tr>
+                        <tr>
+                            <td>LAN1</td>
+                            <td>Up</td>
+                            <td>192.168.1.1</td>
+                            <td>255.255.255.0</td>
+                            <td>00:1A:2B:3C:4D:5E</td>
+                        </tr>
+                        <tr>
+                            <td>LAN2</td>
+                            <td>Down</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>00:1A:2B:3C:4D:5F</td>
+                        </tr>
+                        <tr>
+                            <td>LAN3</td>
+                            <td>Up</td>
+                            <td>192.168.1.2</td>
+                            <td>255.255.255.0</td>
+                            <td>00:1A:2B:3C:4D:60</td>
+                        </tr>
+                        <tr>
+                            <td>LAN4</td>
+                            <td>Down</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>00:1A:2B:3C:4D:61</td>
+                        </tr>
+                    </table>
+                </div>
+            </details>
+            <details>
+                <summary>WLAN Client Status</summary>
+                <!-- Add WLAN Client Status details here -->
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Clint Name</td>
+                                <td>Mac Address</td>
+                                <td>IPv4 Address </td>
+                                <td>IPv6 Address</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <td>Client1</td>
+                            <td>4c:d5:77:0d:a4:5f</td>
+                            <td>192.168.1.6</td>
+                            <td>fe80::cfa7:1ff:fe27:6aa3</td>
+                            </tr>
+                            <tr>
+                                <td>Client2</td>
+                                <td>5c:d5:77:0d:a4:5f</td>
+                                <td>192.168.1.7</td>
+                                <td>fe80::cfa7:1ff:fe27:6aa4</td>
+                            </tr>
+                            <tr>
+                                <td>Client3</td>
+                                <td>6c:d5:77:0d:a4:5f</td>
+                                <td>192.168.1.8</td>
+                                <td>fe80::cfa7:1ff:fe27:6aa5</td>
+                            </tr>
+                            <tr>
+                                <td>Client4</td>
+                                <td>7c:d5:77:0d:a4:5f</td>
+                                <td>192.168.1.9</td>
+                                <td>fe80::cfa7:1ff:fe27:6aa6</td>
+                            </tr>
+
+                        </tbody>
+
+
+                    </table>
+                </div>
+            </details>
+            <details>
+                <summary>LAN Client Status</summary>
+                <!-- Add LAN Client Status details here -->
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Clint Name</td>
+                                <td>Mac Address</td>
+                                <td>IPv4 Address </td>
+                                <td>IPv6 Address</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ClientA</td>
+                                <td>8c:d5:77:0d:a4:5f</td>
+                                <td>192.168.1.10</td>
+                                <td>fe80::cfa7:1ff:fe27:6aa7</td>
+                            </tr>
+                            <tr>
+                                <td>ClientB</td>
+                                <td>9c:d5:77:0d:a4:5f</td>
+                                <td>192.168.1.11</td>
+                                <td>fe80::cfa7:1ff:fe27:6aa8</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+                </div>
+            </details>
+            <details>
+                <summary>USB Storage Status</summary>
+                <!-- Add USB Storage Status details here -->
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Storage Name</td>
+                                <td>Capacity</td>
+                                <td>Used</td>
+                                <td>Free</td>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>USB1</td>
+                                <td>16GB</td>
+                                <td>8GB</td>
+                                <td>8GB</td>
+                            </tr>
+                            <tr>
+                                <td>USB2</td>
+                                <td>32GB</td>
+                                <td>16GB</td>
+                                <td>16GB</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+                </div>
+            </details>
+        </div>
+    </main>
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
